@@ -1,10 +1,9 @@
 {
-  "name": "plugin-template",
+  "name": "legal-discord-bypasses",
   "version": "1.0.0",
-  "description": "A plugin template",
+  "description": "A collection of \"legal\" bypasses and utilities. Take a look in the plugin's settings for the features.",
   "engines": {
-    "node": ">=18.0.0",
-    "pnpm": ">=8.0.0"
+    "node": ">=14.0.0"
   },
   "scripts": {
     "build": "replugged build plugin",
@@ -19,18 +18,20 @@
     "lint:fix": "pnpm run prettier:fix && pnpm run eslint:fix"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Ahlawat",
+  "license": "MIT",
   "devDependencies": {
-    "@types/node": "^18.15.11",
-    "@typescript-eslint/eslint-plugin": "^5.57.0",
-    "@typescript-eslint/parser": "^5.57.0",
-    "eslint": "^8.37.0",
+    "@types/node": "^18.11.2",
+    "@types/react": "^18.0.28",
+    "@typescript-eslint/eslint-plugin": "^5.40.1",
+    "@typescript-eslint/parser": "^5.40.1",
+    "eslint": "^8.25.0",
     "eslint-config-dmitmel": "github:dmitmel/eslint-config-dmitmel",
     "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-react": "^7.32.2",
-    "prettier": "^2.8.7",
-    "replugged": "^4.2.3",
-    "typescript": "^5.0.3"
-  }
+    "eslint-plugin-react": "^7.31.10",
+    "prettier": "^2.8.1",
+    "replugged": "^4.2.6",
+    "typescript": "^4.8.4"
+  },
+  "dependencies": {}
 }

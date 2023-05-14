@@ -1,6 +1,6 @@
 ### LegalDiscordBypasses
 
-A collection of bypasses and utilities in one plugin.
+A collection of "legal" bypasses and utilities in one plugin.
 
 You can toggle them in the plugin settings.
 

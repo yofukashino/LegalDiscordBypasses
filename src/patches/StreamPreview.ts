@@ -1,4 +1,4 @@
-import { CurrentUser, PluginInjector, PluginLogger, SettingValues } from "../index";
+import { PluginInjector, PluginLogger, SettingValues, UltimateUserStore } from "../index";
 import { defaultSettings } from "../lib/consts";
 import { ElectronModule, StreamPreviewStore } from "../lib/requiredModules";
 export const patchStreamPreview = (): void => {
@@ -20,7 +20,7 @@ export const patchStreamPreview = (): void => {
   });
   PluginInjector.instead(StreamPreviewStore, "getPreviewURL", (args, res) => {
     if (
-      args[2] == CurrentUser.id &&
+      args[2] == UltimateUserStore.getCurrentUser()?.id &&
       SettingValues.get("streamPreview", defaultSettings.streamPreview)
     )
       return replacePreviewWith;

@@ -1,7 +1,4 @@
 ### LegalDiscordBypasses
-```diff
-- WARNING: This may adds some extra time on discord boot, please use with patience.
-```
 A collection of "legal" bypasses and utilities in one plugin.
 
 You can toggle them in the plugin settings.

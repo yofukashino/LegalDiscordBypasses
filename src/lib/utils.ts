@@ -1,4 +1,3 @@
-import { common } from "replugged";
 import * as Types from "../types";
 
 export const isObject = (testMaterial: unknown): boolean =>
@@ -15,13 +14,3 @@ export const prototypeChecker = (
   Protos.every((p: string) =>
     Object.values(ModuleExports).some((m: Types.DefaultTypes.AnyFunction) => m?.prototype?.[p]),
   );
-export const currentUser = new Promise((resolve) => {
-  const { users } = common;
-  const getCurrentUser = (): void => {
-    const currentUser = users.getCurrentUser();
-    if (currentUser) {
-      resolve(currentUser);
-    } else setTimeout(getCurrentUser, 100);
-  };
-  getCurrentUser();
-});

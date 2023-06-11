@@ -1,8 +1,5 @@
 import { Injector, Logger, common, settings } from "replugged";
-export const { users: UserStore } = common;
-import * as Utils from "./lib/utils";
-import * as Types from "./types";
-export const CurrentUser = (await Utils.currentUser) as Types.User;
+export const { users: UltimateUserStore } = common;
 import { defaultSettings } from "./lib/consts";
 export const PluginLogger = Logger.plugin("LegalDiscordBypasses");
 export const SettingValues = await settings.init(

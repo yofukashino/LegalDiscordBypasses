@@ -39,6 +39,7 @@ export const ClientThemesBackgroundStore = webpack.getByProps<Types.ClientThemes
 export const ClientThemeUpdate = webpack.getBySource<Types.GenericModule | string>(
   "updateTheme:function",
 );
+export const ImageConstructorModule = webpack.getBySource("\\.gif($|\\?|#)");
 export const GradientPresetModule = webpack.getBySource(
   ".Messages.CLIENT_THEMES_GRADIENT_MINT_APPLE",
 );

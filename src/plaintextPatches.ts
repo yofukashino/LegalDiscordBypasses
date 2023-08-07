@@ -13,6 +13,10 @@ export default [
     find: '"isPreview"',
     replacements: [
       {
+        match: /\n/g,
+        replace: "",
+      },
+      {
         match: /({key:"gradientPreset",get:function\(\){)return (\w+)}}/,
         replace: `$1var bypassPreset=replugged?.plugins?.getExports('dev.tharki.LegalDiscordBypasses')?.SettingValues?.get("gradientPreset", null);return $2=bypassPreset??$2}}, {key:"setGradientPreset",get:function(){return (e) => $2=e}}`,
       },

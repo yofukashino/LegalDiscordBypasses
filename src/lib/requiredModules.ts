@@ -40,6 +40,7 @@ export const ClientThemeUpdate = webpack.getBySource<Types.GenericModule | strin
   "updateTheme:function",
 );
 export const ImageConstructorModule = webpack.getBySource("\\.gif($|\\?|#)");
+export const { exports: GIFTagModule } = webpack.getBySource(".gifTag,", { raw: true }) ?? {};
 export const GradientPresetModule = webpack.getBySource(
   ".Messages.CLIENT_THEMES_GRADIENT_MINT_APPLE",
 );

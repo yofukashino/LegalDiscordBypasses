@@ -74,6 +74,13 @@ export const Settings = () => {
       </SwitchItem>
       <SwitchItem
         {...{
+          note: "Stops Discord from setting your presence to idle, when you leave discord alone.",
+          ...util.useSetting(SettingValues, "noAFK", defaultSettings.noAFK),
+        }}>
+        No Idle
+      </SwitchItem>
+      <SwitchItem
+        {...{
           note: "Show Plain Folder Icon instead of the small guilds icons on guild folders.",
           ...util.useSetting(SettingValues, "plainFolderIcon", defaultSettings.plainFolderIcon),
         }}>

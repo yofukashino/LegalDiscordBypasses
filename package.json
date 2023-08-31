@@ -22,16 +22,16 @@
   "author": "Ahlawat",
   "license": "MIT",
   "devDependencies": {
-    "@types/node": "^18.17.3",
-    "@types/react": "^18.2.18",
+    "@types/node": "^18.17.12",
+    "@types/react": "^18.2.21",
     "@typescript-eslint/eslint-plugin": "^5.62.0",
     "@typescript-eslint/parser": "^5.62.0",
-    "eslint": "^8.46.0",
+    "eslint": "^8.48.0",
     "eslint-config-dmitmel": "github:dmitmel/eslint-config-dmitmel",
     "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-react": "^7.33.1",
+    "eslint-plugin-react": "^7.33.2",
     "prettier": "^2.8.8",
-    "replugged": "^4.5.2",
+    "replugged": "^4.6.1",
     "typescript": "^4.9.5"
   }
 }

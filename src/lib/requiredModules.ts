@@ -1,12 +1,5 @@
 import { webpack } from "replugged";
-import * as Utils from "./utils";
 import * as Types from "../types";
-export const TimeoutModule = webpack.getModule<Types.GenericModule>((m) =>
-  Utils.prototypeChecker(m?.exports, ["start", "stop", "isStarted"]),
-);
-export const Timeout = Object.values(TimeoutModule).find((m) =>
-  ["start", "stop", "isStarted"].every((proto) => m?.prototype?.[proto]),
-) as unknown as Types.Timeout;
 export const DiscordConstantsModule =
   webpack.getBySource<Types.DefaultTypes.ObjectExports>(/command:"giphy"/);
 export const DiscordConstants = {

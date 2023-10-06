@@ -4,9 +4,9 @@ import { patchIdle } from "./CurrentUserIdle";
 import { patchImage } from "./Image";
 import { patchPTT } from "./Permission";
 import { patchBadges } from "./SetBadge";
-import { patchSpotifyPause } from "./SpotifyPause";
 import { patchSpotifyPremium } from "./SpotifyPremium";
 import { patchStreamPreview } from "./StreamPreview";
+import { patchTimeouts } from "./Timeout";
 
 export const applyInjections = (): void => {
   patchAccountSwitcherStrings();
@@ -15,7 +15,7 @@ export const applyInjections = (): void => {
   patchImage();
   patchPTT();
   patchBadges();
-  patchSpotifyPause();
   patchSpotifyPremium();
   patchStreamPreview();
+  patchTimeouts();
 };

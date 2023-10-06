@@ -1,7 +1,7 @@
 import { webpack } from "replugged";
 import * as Types from "../types";
 export const DiscordConstantsModule =
-  webpack.getBySource<Types.DefaultTypes.ObjectExports>(/command:"giphy"/);
+  webpack.getBySource<Types.DefaultTypes.ObjectExports>(".MFA_WARNING=");
 export const DiscordConstants = {
   Permissions: webpack.getExportsForProps(DiscordConstantsModule, [
     "ADMINISTRATOR",
@@ -39,3 +39,7 @@ export const GradientPresetModule = webpack.getBySource(
 export const GradientPresets = Object.values(GradientPresetModule).find(
   (presets) => !Array.isArray(presets),
 );
+export const TimeoutModule = webpack.getBySource(".isStarted=");
+export const Timeout = Object.values(TimeoutModule).find((m: Types.DefaultTypes.AnyFunction) =>
+  ["start", "stop", "isStarted"].every((proto) => m?.prototype?.[proto]),
+) as Types.Timeout;

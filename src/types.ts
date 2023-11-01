@@ -233,8 +233,6 @@ export interface ImagePickerState {
 }
 
 export interface Settings {
-  NSFW: boolean;
-  bandwidth: boolean;
   PTT: boolean;
   setBadge: boolean;
   streamPreview: boolean;
@@ -242,7 +240,6 @@ export interface Settings {
   noAFK: boolean;
   spotifyPremium: boolean;
   spotifyPause: boolean;
-  verification: boolean;
   maxAccounts: boolean;
   clientThemes: boolean;
   plainFolderIcon: boolean;

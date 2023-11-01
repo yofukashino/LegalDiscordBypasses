@@ -1,6 +1,5 @@
-import { common } from "replugged";
-import * as Types from "../types";
-const { React } = common;
+import { React } from "replugged/common";
+import Types from "../types";
 export class CloseButton extends React.Component<Types.CloseButtonProps> {
   constructor(props: Types.CloseButtonProps) {
     super(props);

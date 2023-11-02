@@ -15,12 +15,12 @@ export default [
       {
         match: /(get\s*gradientPreset\s*\(\s*\)\s*{\s*return\s*(\w+))\s*}/,
         replace: (_, prefix: string, preset: string) =>
-          `${prefix}=replugged?.plugins?.getExports('dev.tharki.DiscordBypasses')?._getGradientPreset(${preset})} setGradientPreset(e){${preset}=e}`,
+          `${prefix}=replugged?.plugins?.getExports('dev.tharki.LegalDiscordBypasses')?._getGradientPreset(${preset})} setGradientPreset(e){${preset}=e}`,
       },
       {
         match: /(get\s*isPreview\s*\(\s*\)\s*{return\s*(\w+))\s*}/,
         replace: (_, prefix: string, orignal: string) =>
-          `${prefix}=replugged?.plugins?.getExports('dev.tharki.DiscordBypasses')?._getisPreview(${orignal})}`,
+          `${prefix}=replugged?.plugins?.getExports('dev.tharki.LegalDiscordBypasses')?._getisPreview(${orignal})}`,
       },
     ],
   },
@@ -30,7 +30,7 @@ export default [
       {
         match: /(get\s*theme\s*\(\s*\)\s*{\s*return)\s*(\w+\(\))}/,
         replace: (_, prefix: string, preset: string) =>
-          `${prefix} replugged?.plugins?.getExports('dev.tharki.DiscordBypasses')?._getTheme(${preset})}`,
+          `${prefix} replugged?.plugins?.getExports('dev.tharki.LegalDiscordBypasses')?._getTheme(${preset})}`,
       },
     ],
   },

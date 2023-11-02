@@ -1,6 +1,6 @@
 {
   "name": "legal-discord-bypasses",
-  "version": "1.1.3",
+  "version": "1.1.4",
   "description": "A collection of \"legal\" bypasses and utilities. Take a look in the plugin's settings for the features.",
   "engines": {
     "node": ">=14.0.0"

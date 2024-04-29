@@ -15,6 +15,8 @@ Install Link:
 ![ldb](https://YofukashiNo.github.io/files-random-host/bdpluginsassets/legalbypass.png)
 
 <sub>For more risky bypasses install non-store version: [DiscordBypasses](https://github.com/YofukashiNo/DiscordBypasses)</sub>
+
+
 ---
 
 # FAQ

@@ -19,19 +19,19 @@
     "lint:fix": "pnpm run prettier:fix && pnpm run eslint:fix"
   },
   "keywords": [],
-  "author": "Ahlawat",
+  "author": "Nanakusa",
   "license": "MIT",
   "devDependencies": {
     "@types/node": "^18.18.3",
     "@types/react": "^18.2.25",
-    "@typescript-eslint/eslint-plugin": "^6.7.4",
-    "@typescript-eslint/parser": "^6.7.4",
+    "@typescript-eslint/eslint-plugin": "^6.8.0",
+    "@typescript-eslint/parser": "^6.8.0",
     "eslint": "^8.50.0",
     "eslint-config-dmitmel": "github:dmitmel/eslint-config-dmitmel",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-react": "^7.33.2",
     "prettier": "^2.8.8",
-    "replugged": "^4.7.4",
+    "replugged": "^4.7.9",
     "typescript": "^5.0.0"
   }
 }

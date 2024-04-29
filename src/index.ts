@@ -1,5 +1,4 @@
-import { Injector, Logger, common, settings } from "replugged";
-export const { users: UltimateUserStore } = common;
+import { Injector, Logger, settings } from "replugged";
 import { defaultSettings } from "./lib/consts";
 export const PluginLogger = Logger.plugin("LegalDiscordBypasses");
 export const SettingValues = await settings.init(
@@ -7,12 +6,12 @@ export const SettingValues = await settings.init(
   defaultSettings,
 );
 export const PluginInjector = new Injector();
+import Settings from "./Components/Settings";
+import Injections from "./injections/index";
 
-import { registerSettings } from "./Components/Settings";
-import { applyInjections } from "./patches/index";
 export const start = (): void => {
-  registerSettings();
-  applyInjections();
+  Settings.registerSettings();
+  void Injections.applyInjections();
 };
 
 export const stop = (): void => {

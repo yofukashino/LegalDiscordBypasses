@@ -11,4 +11,6 @@ export const defaultSettings = {
   gradientPreset: null,
   plainFolderIcon: true,
   favIMG: true,
+  ringtone: "call_ringing_beat.mp3",
+  spam: true,
 };

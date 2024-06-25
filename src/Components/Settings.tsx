@@ -1,4 +1,5 @@
 import { util } from "replugged";
+import { users as UltimateUserStore } from "replugged/common";
 import { Divider, FormText, SelectItem, SwitchItem } from "replugged/components";
 import { PluginLogger, SettingValues } from "../index";
 import { defaultSettings } from "../lib/consts";
@@ -47,6 +48,7 @@ export const Settings = () => {
         {...util.useSetting(SettingValues, "spotifyPause", defaultSettings.spotifyPause)}>
         Spotify Pause
       </SwitchItem>
+
       <SwitchItem
         note="Removes the maximum account limit in Discord's built-in account switcher."
         {...util.useSetting(SettingValues, "maxAccounts", defaultSettings.maxAccounts)}>
@@ -86,6 +88,11 @@ export const Settings = () => {
         note="Show none of the users as spam."
         {...util.useSetting(SettingValues, "spam", defaultSettings.spam)}>
         No Spam
+      </SwitchItem>
+      <SwitchItem
+        note="Add Download button for voice messages."
+        {...util.useSetting(SettingValues, "voiceMessage", defaultSettings.voiceMessage)}>
+        Downloadable Voice Messages
       </SwitchItem>
       <FormText.LABEL_BOLD
         style={{

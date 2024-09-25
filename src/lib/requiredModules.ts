@@ -54,7 +54,7 @@ Modules.loadModules = async (): Promise<void> => {
 
   Modules.ImageConstructor ??= await webpack
     .waitForModule<Types.GenericModule & Record<string, RegExp>>(
-      webpack.filters.bySource("/\\.gif($|\\?|#)/i"),
+      webpack.filters.bySource("/\\.(gif|webp)($|\\?|#)/i"),
       {
         timeout: 10000,
       },
@@ -150,9 +150,7 @@ Modules.loadModules = async (): Promise<void> => {
   );
   Modules.IdleStore ??= webpack.getByStoreName<Types.IdleStore>("IdleStore");
   Modules.ApplicationStreamPreviewStore ??=
-    await webpack.getByStoreName<Types.ApplicationStreamPreviewStore>(
-      "ApplicationStreamPreviewStore",
-    );
+    webpack.getByStoreName<Types.ApplicationStreamPreviewStore>("ApplicationStreamPreviewStore");
 };
 
 export default Modules;

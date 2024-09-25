@@ -3,11 +3,11 @@
   "name": "LegalDiscordBypasses",
   "description": "A collection of \"legal\" bypasses and utilities. Take a look in the plugin's settings for the features.",
   "image": "https://i.imgur.com/S8JEL76.png",
-  "source": "https://github.com/YofukashiNo/LegalDiscordBypasses",
+  "source": "https://github.com/yofukashino/LegalDiscordBypasses",
   "author": {
     "name": "Nanakusa",
     "discordID": "1121961711080050780",
-    "github": "YofukashiNo"
+    "github": "yofukashino"
   },
   "version": "1.1.6",
   "updater": {

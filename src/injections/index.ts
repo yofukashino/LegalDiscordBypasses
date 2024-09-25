@@ -9,7 +9,6 @@ import injectPTT from "./Permission";
 import injectBadges from "./SetBadge";
 import injectSpamUtils from "./SpamUtils";
 import injectSpotifyPremium from "./SpotifyPremium";
-import injectStreamPreview from "./StreamPreview";
 import injectTimeouts from "./Timeout";
 
 export const applyInjections = async (): Promise<void> => {

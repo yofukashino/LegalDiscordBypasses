@@ -23,7 +23,6 @@ export const applyInjections = async (): Promise<void> => {
   injectBadges();
   injectSpamUtils();
   injectSpotifyPremium();
-  injectStreamPreview();
   injectTimeouts();
 };
 

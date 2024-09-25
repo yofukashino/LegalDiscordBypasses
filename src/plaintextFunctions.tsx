@@ -1,4 +1,4 @@
-import { SettingValues,PluginLogger } from "./index";
+import { SettingValues, PluginLogger } from "./index";
 import { defaultSettings } from "./lib/consts";
 export const _getGradientPreset = (preset: string): string => {
   return SettingValues.get("gradientPreset", defaultSettings.gradientPreset) ?? preset;

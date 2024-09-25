@@ -1,5 +1,4 @@
 import { util } from "replugged";
-import { users as UltimateUserStore } from "replugged/common";
 import { Divider, FormText, SelectItem, SwitchItem } from "replugged/components";
 import { PluginLogger, SettingValues } from "../index";
 import { defaultSettings } from "../lib/consts";

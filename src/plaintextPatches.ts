@@ -48,6 +48,10 @@ export default [
     find: "AppIconPersistedStoreState",
     replacements: [
       {
+        match: /\w+\.\w+\.canUsePremiumAppIcons\(\w+\.default\.getCurrentUser\(\)\)/,
+        replace: `(replugged?.plugins?.getExports('dev.tharki.LegalDiscordBypasses')?._getAppIconsEnabled()||$&)`,
+      },
+      {
         match: /get isUpsellPreview\(\){return (\w+)/,
         replace: (_, value: string) =>
           `get isUpsellPreview(){return !(replugged?.plugins?.getExports('dev.tharki.LegalDiscordBypasses')?._getAppIconsEnabled() || !${value})`,

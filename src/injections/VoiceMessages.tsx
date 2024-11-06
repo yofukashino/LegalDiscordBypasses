@@ -17,7 +17,7 @@ export default (): void => {
       res?.props?.children?.splice?.(
         -1,
         0,
-        <Tooltip text={i18n.Messages.DOWNLOAD}>
+        <Tooltip text={"Download"}>
           {(props) => (
             <DownloadButton
               {...props}

@@ -9,6 +9,8 @@ export const PluginInjector = new Injector();
 import Settings from "./Components/Settings";
 import Injections from "./injections/index";
 
+import "./style.css";
+
 export const start = (): void => {
   Settings.registerSettings();
   void Injections.applyInjections().catch((err) => PluginLogger.error(err));

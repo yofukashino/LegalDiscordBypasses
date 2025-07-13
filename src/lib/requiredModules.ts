@@ -63,33 +63,14 @@ Modules.loadModules = async (): Promise<void> => {
       throw new Error("Failed To Find ImageConstructor Module");
     });
 
-  Modules.ClientThemeUpdate ??= await webpack
-    .waitForModule<Types.GenericModule>(
-      webpack.filters.bySource("clientThemeSettings:{backgroundGradientPresetId"),
-      {
-        timeout: 10000,
-      },
-    )
+  Modules.PreloadedUserSettings ??= await webpack
+    .waitForModule<Types.SettingsPreload>(webpack.filters.bySource("PreloadedUserSettings"), {
+      timeout: 10000,
+    })
+    .then((mod) => Object.values(mod).find((v) => v?.typeName?.endsWith?.("PreloadedUserSettings")))
     .catch(() => {
-      throw new Error("Failed To Find ClientThemeUpdate Module");
+      throw new Error("Failed To Find PreloadedUserSettings Module");
     });
-
-  Modules.GradientPresetsModule ??= await webpack
-    .waitForModule<Record<string, Record<string, string>>>(
-      webpack.filters.bySource(".MINT_APPLE,theme"),
-      {
-        timeout: 10000,
-      },
-    )
-    .catch(() => {
-      throw new Error("Failed To Find GradientPresets Module");
-    });
-
-  Modules.GradientPresets ??= {
-    BACKGROUND_GRADIENT_PRESETS_MAP: Object.values(Modules.GradientPresetsModule).find(
-      (x) => !Array.isArray(x),
-    ),
-  };
 
   Modules.FolderConstructor ??= await webpack
     .waitForModule<Types.GenericExport>(webpack.filters.bySource(".folderIconWrapper"), {
@@ -139,7 +120,8 @@ Modules.loadModules = async (): Promise<void> => {
     .catch(() => {
       throw new Error("Failed To Find DownloadButton Module");
     });
-
+  Modules.UserSettingsProtoStore ??=
+    webpack.getByStoreName<Types.UserSettingsProtoStore>("UserSettingsProtoStore");
   Modules.PermissionStore ??= webpack.getByStoreName<Types.PermissionStore>("PermissionStore");
   Modules.ClientThemesBackgroundStore ??= webpack.getByStoreName<Types.ClientThemesBackgroundStore>(
     "ClientThemesBackgroundStore",

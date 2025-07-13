@@ -1,13 +1,8 @@
 import { PluginLogger, SettingValues } from "./index";
 import { defaultSettings } from "./lib/consts";
-export const _getGradientPreset = (preset: string): string => {
-  return SettingValues.get("gradientPreset", defaultSettings.gradientPreset) ?? preset;
-};
+
 export const _getisPreview = (originalValue: boolean): boolean => {
   return !(!originalValue || SettingValues.get("clientThemes", defaultSettings.clientThemes));
-};
-export const _getTheme = (preset: string): string => {
-  return SettingValues.get("gradientPreset", defaultSettings.gradientPreset)?.theme ?? preset;
 };
 
 export const _getStreamPreview = (original: string): string | void => {
@@ -20,4 +15,23 @@ export const _getStreamPreview = (original: string): string | void => {
 
 export const _getAppIconsEnabled = (): boolean => {
   return SettingValues.get("appIcons", defaultSettings.appIcons);
+};
+
+export const _getCustomThemesEnabled = (original): boolean => {
+  return SettingValues.get("clientThemes", defaultSettings.clientThemes) || original;
+};
+
+export const _getSettingsProtoToSave = (
+  protoToSave: Record<string, unknown> & {
+    appearance: { clientThemeSettings: Record<string, unknown> };
+  },
+): Record<string, unknown> => {
+  if (!SettingValues.get("clientThemes", defaultSettings.clientThemes)) {
+    SettingValues.set("clientThemeSettings", defaultSettings.clientThemeSettings);
+    return protoToSave;
+  }
+  if (protoToSave?.appearance?.clientThemeSettings)
+    SettingValues.set("clientThemeSettings", protoToSave?.appearance?.clientThemeSettings);
+  delete protoToSave?.appearance?.clientThemeSettings;
+  return protoToSave;
 };

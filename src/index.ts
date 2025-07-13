@@ -23,9 +23,9 @@ export const stop = (): void => {
 export { Settings } from "./Components/Settings";
 
 export {
-  _getGradientPreset,
-  _getTheme,
   _getisPreview,
   _getStreamPreview,
   _getAppIconsEnabled,
+  _getCustomThemesEnabled,
+  _getSettingsProtoToSave,
 } from "./plaintextFunctions";

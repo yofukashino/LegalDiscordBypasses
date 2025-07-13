@@ -9,7 +9,7 @@ export const defaultSettings = {
   maxAccounts: true,
   clientThemes: true,
   appIcons: true,
-  gradientPreset: null,
+  clientThemeSettings: null,
   plainFolderIcon: true,
   favIMG: true,
   ringtone: "sync",

@@ -1,3 +1,7 @@
+:warning: **Development moved at https://github.com/yofukashino/DiscordBypasses**
+
+---
+
 ### LegalDiscordBypasses
 
 A collection of "legal" bypasses and utilities in one plugin.
